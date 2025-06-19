@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactief Scherm en Sensor Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Interactief Scherm en Sensor Monitoring Systeem</h1>
+</header>
+
+<div class="container">
+    <!-- Instellingen Sectie -->
+    <div class="settings">
+        <h3>Instellingen voor Sensoren</h3>
+        <!-- Variabelen Instellingen -->
+        <div class="sensor-item">
+            <label for="temperature-slider">Temperatuur Instellen:</label>
+            <input type="range" id="temperature-slider" min="0" max="50" value="25" step="1">
+            <span id="temperature-value">25°C</span>
+        </div>
+
+        <div class="sensor-item">
+            <label for="humidity-slider">Luchtvochtigheid Instellen:</label>
+            <input type="range" id="humidity-slider" min="0" max="100" value="60" step="1">
+            <span id="humidity-value">60%</span>
+        </div>
+
+        <div class="sensor-item">
+            <label for="pressure-slider">Luchtdruk Instellen:</label>
+            <input type="range" id="pressure-slider" min="900" max="1100" value="1013" step="1">
+            <span id="pressure-value">1013 hPa</span>
+        </div>
+    </div>
+
+    <!-- Sensor Data Display Sectie -->
+    <div class="sensor-data">
+        <h3>Sensorwaarden</h3>
+        <div id="data-container">
+            <p><strong>Temperatuur:</strong> <span id="live-temperature">25°C</span></p>
+            <p><strong>Luchtvochtigheid:</strong> <span id="live-humidity">60%</span></p>
+            <p><strong>Luchtdruk:</strong> <span id="live-pressure">1013 hPa</span></p>
+        </div>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
